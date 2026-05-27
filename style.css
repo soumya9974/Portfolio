@@ -12,6 +12,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -27,7 +28,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 9%;
+  padding: 1rem 6%;
   background-color: rgba(0, 0, 0, 0.55);
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.35));
   display: flex;
@@ -103,7 +104,16 @@ nav a.active {
 
 section {
   min-height: 100vh;
-  padding: 5rem 9% 5rem;
+  padding: 5rem 6% 5rem;
+}
+
+section,
+.education-section,
+.skills-section,
+.experience-section,
+.projects-section,
+.contact-section {
+  scroll-margin-top: 9rem;
 }
 
 .home {
@@ -271,7 +281,7 @@ span {
 .skills-section h2 {
   font-size: 4rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .skills-container {
@@ -281,6 +291,20 @@ span {
   width: 100%;
   max-width: 1200px;
   margin-bottom: 6rem;
+}
+
+/* Center main sections and containers to remove left/right imbalance */
+.education-section,
+.skills-section,
+.experience-section,
+.projects-section,
+.education-container,
+.skills-container,
+.experience-container,
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .skill-item {
