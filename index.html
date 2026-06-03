@@ -13,7 +13,10 @@
   <body>
     <header>
       <a href="#home" class="logo">Soumya</a>
-      <nav>
+      <div class="menu-toggle" id="menu-toggle" aria-label="Open navigation">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <nav id="main-nav">
         <a href="#home" class="active">Home</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
@@ -23,7 +26,7 @@
     </header>
     <section class="home" id="home">
       <div class="home-img">
-        <img src="Soumya.jpeg" alt="Developer" />
+        <img src="Soumya.png" alt="Developer" />
       </div>
       <div class="home-content">
         <h1>Hi, It's <span>Soumya</span></h1>
@@ -227,5 +230,13 @@
         </div>
       </div>
     </div>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mainNav = document.getElementById("main-nav");
+
+      menuToggle.addEventListener("click", () => {
+        mainNav.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
